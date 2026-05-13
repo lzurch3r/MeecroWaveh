@@ -5,7 +5,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker([43.819046, -111.783228]).addTo.map;
+var marker = L.marker([43.819046, -111.783228]).addTo(map);
 
 //DEBUG
 var popup = L.popup();
