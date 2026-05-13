@@ -1,1 +1,9 @@
-#map { height: 360px }
+h1, p {
+    text-align: center;
+}
+
+#map {
+    margin: 0 auto;
+    height: 360px;
+    width: 90%;  
+}
