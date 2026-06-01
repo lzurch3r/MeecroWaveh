@@ -1,4 +1,5 @@
 var map = L.map('map').setView([43.819046, -111.783228], 14);
+var itemDetails = document.getElementById('item_details');
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -15,6 +16,8 @@ function onMapClick(e) {
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(map);
+
+    itemDetails.innerHTML = "<p>You clicked the map at " + e.latlng.toString() + "</p>";
 }
 
 map.on('click', onMapClick);
