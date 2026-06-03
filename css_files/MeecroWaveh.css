@@ -5,8 +5,8 @@ h1, p {
 
 #map {
     margin: 0 auto;
-    height: 550px; /* Increased height for better visibility */
-    width: 90%;  
+    height: 90vh; /* height is 90% of the window height. Adapts to portrait/landscape mode */
+    width: 90vw;  /* width is 90% of the window width. Adapts to portrait/landscape mode */
     border: 2px solid #ccc;
     border-radius: 8px;
 }
