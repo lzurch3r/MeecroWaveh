@@ -1,0 +1,7 @@
+[{"vending_machine_id":6, "vendor":"7 Up", "location_description":"North corner", "building_id":5, "room_id":12, "latitude":43.81481, "longitude":-111.78098},
+ {"vending_machine_id":7, "vendor":"Good to Go", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81512, "longitude":-111.78091},
+ {"vending_machine_id":8, "vendor":"7 Up", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
+ {"vending_machine_id":9, "vendor":"Crossroads (Snacks)", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81514, "longitude":-111.78091},
+ {"vending_machine_id":10, "vendor":"7 Up", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247},
+ {"vending_machine_id":11, "vendor":"Crossroads (Snacks)", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81675, "longitude":-111.78247},
+ {"vending_machine_id":12, "vendor":"Pepsi", "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825}]

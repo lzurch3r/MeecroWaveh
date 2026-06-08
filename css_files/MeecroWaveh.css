@@ -37,21 +37,13 @@ h1 {
 /*--------------- Body CSS   ---------------*/
 h1, p {
     text-align: center;
+    font-family: sans-serif;
 }
 
 #map {
     margin: 0 auto;
-    height: 440px;
-    width: 90%;
-    border: 50px;
-    background-color: #ffd6ba;
-}
-
-/*--------------- Footer CSS   ---------------*/
-footer {
-    background-color: #bee3db;
-    padding: .75em;
-}
-.footer_text {
-    float: right;
+    height: 90vh; /* height is 90% of the window height. Adapts to portrait/landscape mode */
+    width: 90vw;  /* width is 90% of the window width. Adapts to portrait/landscape mode */
+    border: 2px solid #ccc;
+    border-radius: 8px;
 }

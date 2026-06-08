@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  },
+  "name": "meecrowaveh",
+  "version": "1.0.0",
+  "description": "- Boston Wyatt\r - Ethan Gilchrist\r - Kade Barker\r - Lev Zurcher\r - Nefi Serrano Ramirez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzurch3r/MeecroWaveh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lzurch3r/MeecroWaveh/issues"
+  },
+  "homepage": "https://github.com/lzurch3r/MeecroWaveh#readme"
+}
