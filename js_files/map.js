@@ -1,6 +1,7 @@
 import { buildings } from '../database/database.js';
 
 var map = L.map('map').setView([43.816046, -111.783228], 15);
+var building_markers = null;
 displayZoomedOut()  //default zoom on loaded page
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -59,8 +60,8 @@ map.on('zoomend', function() {
         if (map.hasLayer(floor1Group)) map.removeLayer(floor1Group);
         if (map.hasLayer(floor2Group)) map.removeLayer(floor2Group);
         if (map.hasLayer(floor3Group)) map.removeLayer(floor3Group);
-        
-        displayZoomedOut();
+        console.log(currentZoom);
+        displayZoomedOut(true);
     } else {
         if (!map.hasLayer(floor1Group) && !map.hasLayer(floor2Group) && !map.hasLayer(floor3Group)) {
             floor1Group.addTo(map);
@@ -68,17 +69,31 @@ map.on('zoomend', function() {
             var layerControlElement = document.querySelector('.leaflet-control-layers-selector[type="radio"]:last-child');
             if (layerControlElement) layerControlElement.checked = true;
         }
+        displayZoomedOut(false);
+        console.log(currentZoom);
     }
 });
 
-function displayZoomedOut() {
-    for (const building of buildings) {
-        const latlng = [building.latitude, building.longitude];
-        const name = building.building_name;
+function displayZoomedOut(load_it) {
+    if (load_it) {
+        building_markers = [];
+        for (const building of buildings) {
 
-        L.marker(latlng)
-            .addTo(map)
-            .bindPopup(name)
+            const latlng = [building.latitude, building.longitude];
+            const name = building.building_name;
+
+            const marker = L.marker(latlng).addTo(map).bindPopup(name);
+            building_markers.push(marker);
+        }
+        console.log(building_markers);
+    }
+    else {
+        if (building_markers)
+        building_markers.forEach(marker => {
+            map.removeLayer(marker);
+        });
+        console.log("Should be empty");
+        console.log(building_markers);
     }
 }
 /*var popup = L.popup();
