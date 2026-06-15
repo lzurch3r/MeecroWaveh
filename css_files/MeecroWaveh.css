@@ -1,8 +1,16 @@
 /*--------------- HEADER CSS   ---------------*/
+header {
+    background-color: #3a7ca5;
+    padding-top: 1em;
+}
+header.dark {
+    background-color: #16425b;
+}
 .icon {
-    max-width: 50%;
+    max-width: 3em;
     height: auto;
-    float: right;
+    vertical-align: middle;
+    display: inline-block;
 }
 ul {
     list-style-type: none;
@@ -27,16 +35,10 @@ ul li a {
 ul li a:hover, #theme:hover {
     background-color: #81c3d7;
 }
-header {
-    background-color: #3a7ca5;
-    padding-top: 1em;
-}
-header.dark {
-    background-color: #16425b;
-}
 header h1 {
     letter-spacing: 1px;
     font-size: 2em;
+    display: inline-block;
 }
 #theme {
     background-color: #16425b;
@@ -56,6 +58,7 @@ h1, p {
     width: 90vw;  /* width is 90% of the window width. Adapts to portrait/landscape mode */
     border: 2px solid #ccc;
     border-radius: 8px;
+    background-color: #16425b;
 }
 
 body {
@@ -82,3 +85,10 @@ body.dark {
 
 }
 /*--------------- Footer CSS   ---------------*/
+footer{
+    margin: 1em;
+}
+
+footer h6 {
+    float: right;
+}
