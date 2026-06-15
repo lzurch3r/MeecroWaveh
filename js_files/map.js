@@ -57,17 +57,19 @@ map.on('zoomend', function() {
     var currentZoom = map.getZoom();
     console.log(currentZoom);
     
-    if (currentZoom < 18) { 
+    if (currentZoom < 18 && currentZoom > 14) { 
         if (map.hasLayer(floor1Group)) map.removeLayer(floor1Group);
         if (map.hasLayer(floor2Group)) map.removeLayer(floor2Group);
         if (map.hasLayer(floor3Group)) map.removeLayer(floor3Group);
         displayZoomedOut(true);
     } else {
-        if (!map.hasLayer(floor1Group) && !map.hasLayer(floor2Group) && !map.hasLayer(floor3Group)) {
-            floor1Group.addTo(map);
-            
-            var layerControlElement = document.querySelector('.leaflet-control-layers-selector[type="radio"]:last-child');
-            if (layerControlElement) layerControlElement.checked = true;
+        if (currentZoom >= 18) { 
+            if (!map.hasLayer(floor1Group) && !map.hasLayer(floor2Group) && !map.hasLayer(floor3Group)) {
+                floor1Group.addTo(map);
+
+                var layerControlElement = document.querySelector('.leaflet-control-layers-selector[type="radio"]:last-child');
+                if (layerControlElement) layerControlElement.checked = true;
+            }
         }
         displayZoomedOut(false);
     }
