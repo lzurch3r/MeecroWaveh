@@ -5,17 +5,17 @@
     float: right;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 li {
     margin: .5em;
     background-color: #2f6690;   
 }
 ul li {
-    float: left;
+    float: none;
 }
 ul li a {
     display: block;
@@ -52,10 +52,11 @@ h1, p {
 
 #map {
     margin: 0 auto;
-    height: 90vh; /* height is 90% of the window height. Adapts to portrait/landscape mode */
-    width: 90vw;  /* width is 90% of the window width. Adapts to portrait/landscape mode */
+    height: 70vh; /* height is 90% of the window height. Adapts to portrait/landscape mode */
+    width: 95%;  /* width is 90% of the window width. Adapts to portrait/landscape mode */
     border: 2px solid #ccc;
     border-radius: 8px;
+    min-height: 400px;
 }
 
 body {
@@ -86,3 +87,67 @@ body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet
     filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 /*--------------- Footer CSS   ---------------*/
+
+
+
+/*------------  Mobile CSS  -----------------*/
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    ul li {
+        float: none;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    ul li a {
+        padding: 12px;
+    }
+
+    #theme {
+        width: 100%;
+    }
+
+    .icon {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        max-width: 120px;
+    }
+
+    #map {
+        width: 95vw;
+        height: 70vh;
+    }
+
+    h1, p {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #map {
+        width: 90%;
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    #map {
+        width: 98vw;
+        height: 60vh;
+    }
+
+    ul li a {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
