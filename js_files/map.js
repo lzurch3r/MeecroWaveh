@@ -98,11 +98,3 @@ function displayZoomedOut(load_it) {
         console.log(building_markers);
     }
 }
-/*var popup = L.popup();
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("Clicked Coord: <code>[" + e.latlng.lat.toFixed(6) + ", " + e.latlng.lng.toFixed(6) + "]</code>")
-        .openOn(map);
-}
-map.on('click', onMapClick);*/
