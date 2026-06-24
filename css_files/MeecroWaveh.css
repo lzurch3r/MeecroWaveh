@@ -86,6 +86,11 @@ body.dark {
 body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet-control-zoom-out, body.dark .leaflet-control-attribution, body.dark .leaflet-control {
     filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
+
+.marker_content {
+    justify-items: center;
+}
+
 /*--------------- Footer CSS   ---------------*/
 
 
@@ -151,3 +156,4 @@ body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet
         padding: 10px;
     }
 }
+

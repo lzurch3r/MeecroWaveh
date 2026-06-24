@@ -11,7 +11,7 @@ export const buildings =  [{"building_id":2, "building_name":"STC", "latitude":4
  {"building_id":10, "building_name":"McKay Library", "latitude":43.81933, "longitude":-111.78318, "coordinates":"43\u00b049'10\"N 111\u00b046'59\"W"},
  {"building_id":11, "building_name":"Hart", "latitude":43.8195, "longitude":-111.78457, "coordinates":"43\u00b049'10\"N 111\u00b047'04\"W"},
  {"building_id":12, "building_name":"Smith", "latitude":43.8192, "longitude":-111.78149, "coordinates":"43\u00b049'09\"N 111\u00b046'53\"W"},
- {"building_id":13, "building_name":"Clark", "latitude":43.82019, "longitude":-111.78175, "coordinates":"43\u00b049'13\"N 111\u00b046'54\"W"},
+ {"building_id":13, "building_name":"Clarke", "latitude":43.82019, "longitude":-111.78175, "coordinates":"43\u00b049'13\"N 111\u00b046'54\"W"},
  {"building_id":14, "building_name":"Spori", "latitude":43.82083, "longitude":-111.78243, "coordinates":"43\u00b049'15\"N 111\u00b046'57\"W"},
  {"building_id":15, "building_name":"Romney", "latitude":43.8202, "longitude":-111.78323, "coordinates":"43\u00b049'13\"N 111\u00b047'00\"W"},
  {"building_id":16, "building_name":"Snow", "latitude":43.82129, "longitude":-111.78382, "coordinates":"43\u00b049'17\"N 111\u00b047'02\"W"},
@@ -21,13 +21,13 @@ export const buildings =  [{"building_id":2, "building_name":"STC", "latitude":4
  {"building_id":20, "building_name":"Biddulph", "latitude":43.81704, "longitude":-111.78518, "coordinates":"43\u00b049'01\"N 111\u00b047'07\"W"},
  {"building_id":21, "building_name":"Health Center", "latitude":43.81675, "longitude":-111.77938, "coordinates":"43\u00b049'00\"N 111\u00b046'46\"W"},
  {"building_id":22, "building_name":"ETC", "latitude":43.81411, "longitude":-111.78310, "coordinates":"43\u00b048'51\"N 111\u00b046'59\"W"}];
-let microwaves = [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452},
+export const microwaves = [{"microwave_id":1, "location_description":"North side of main atrium, next to the vending machines.", "building_id":2, "room_id":6, "latitude":43.8145, "longitude":-111.78452},
  {"microwave_id":6, "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
  {"microwave_id":7, "location_description":"In the northwest corner, on a table next to the railing", "building_id":5, "room_id":12, "latitude":43.81489, "longitude":-111.78102},
  {"microwave_id":8, "location_description":"Unknown", "building_id":13, "room_id":0, "latitude":43.82015, "longitude":-111.78162},
  {"microwave_id":9, "location_description":"Unknown", "building_id":22, "room_id":0, "latitude":43.81411, "longitude":-111.78312},
  {"microwave_id":10, "location_description":"Unknown", "building_id":11, "room_id":0, "latitude":43.81947, "longitude":-111.78496}];
-let printers = [{"printer_id":5, "location_description":"Against the south wall", "building_id":5, "room_id":12, "latitude":43.81479, "longitude":-111.7808},
+export const printers = [{"printer_id":5, "location_description":"Against the south wall", "building_id":5, "room_id":12, "latitude":43.81479, "longitude":-111.7808},
  {"printer_id":6, "location_description":"Along the south wall, near where the hallway opens into the atrium", "building_id":5, "room_id":8, "latitude":43.8148, "longitude":-111.78113},
  {"printer_id":7, "location_description":"Unknown", "building_id":6, "room_id":17, "latitude":43.81685, "longitude":-111.7825},
  {"printer_id":8, "location_description":"Unknown", "building_id":12, "room_id":0, "latitude":43.81917, "longitude":-111.78153},
@@ -66,7 +66,7 @@ let rooms = [{"room_id":6, "room_name":"Atrium", "building_id":2, "floor":2, "la
  {"room_id":17, "room_name":"Unknown", "building_id":6, "floor":1, "latitude":0.0, "longitude":0.0},
  {"room_id":18, "room_name":"320A", "building_id":2, "floor":3, "latitude":43.81452, "longitude":-111.78471},
  {"room_id":19, "room_name":"367", "building_id":2, "floor":3, "latitude":43.8148, "longitude":-111.7846}];
-let vending_machines = [{"vending_machine_id":6, "vendor":"7 Up", "location_description":"North corner", "building_id":5, "room_id":12, "latitude":43.81481, "longitude":-111.78098},
+export const vending_machines = [{"vending_machine_id":6, "vendor":"7 Up", "location_description":"North corner", "building_id":5, "room_id":12, "latitude":43.81481, "longitude":-111.78098},
  {"vending_machine_id":7, "vendor":"Good to Go", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81512, "longitude":-111.78091},
  {"vending_machine_id":8, "vendor":"7 Up", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81513, "longitude":-111.78091},
  {"vending_machine_id":9, "vendor":"Crossroads (Snacks)", "location_description":"At the end of the hallway, near the entrance", "building_id":5, "room_id":7, "latitude":43.81514, "longitude":-111.78091},
