@@ -58,6 +58,10 @@ h1, p {
     width: 90vw;  /* width is 90% of the window width. Adapts to portrait/landscape mode */
     border: 2px solid #ccc;
     border-radius: 8px;
+    background-color: #d9dcd6;
+}
+
+#map.dark {
     background-color: #16425b;
 }
 
@@ -82,7 +86,6 @@ body.dark {
 
 #anim {
     margin: auto;
-
 }
 
 body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet-control-zoom-out, body.dark .leaflet-control-attribution, body.dark .leaflet-control {

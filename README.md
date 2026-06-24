@@ -6,6 +6,7 @@
 - Kade Barker
 - Lev Zurcher
 - Nefi Serrano Ramirez
+- Tanner Wyman
 
 ## Software Description
 A web-based program that displays a map for BYU-I students that locates microwaves, vending machines, and printers/copy machines. The student user can filter between these categories. They can also navigate to the microwave nearest to them using Google Maps.
@@ -45,11 +46,11 @@ A web-based program that displays a map for BYU-I students that locates microwav
 
 |Responsibility                      |Team Member(s)              |
 |------------------------------------|----------------------------|
-|Conducting Meetings                 | Kade                           |
-|Maintaining Team Assignment List    | Nefi                           |
-|Ensuring GitHub is Working          | Boston                           |
-|Maintaining Documentation           | Ethan, Lev                           |
-|Create & Display Presentations      | Boston, Lev                           |
-|Submit Team Assignments             | Kade                           |
+|Conducting Meetings                 | Kade                       |
+|Maintaining Team Assignment List    | Nefi                       |
+|Ensuring GitHub is Working          | Boston                     |
+|Maintaining Documentation           | Ethan, Lev                 |
+|Create & Display Presentations      | Boston, Lev                |
+|Submit Team Assignments             | Kade                       |
 
 ## Reflections
