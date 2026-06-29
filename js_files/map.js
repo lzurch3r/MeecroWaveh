@@ -118,9 +118,12 @@ function displayZoomedOut(load_it) {
             });
 
             content += "</div>";
-            
 
-            const marker = L.marker(latlng).addTo(map).bindPopup(content);
+            // Enters the text for the building marker
+            const icon_html = '<p class="building-icon-html">' + building.building_name + '</p>';
+            var building_icon = L.divIcon({className: '.leaflet-building-icon', html: icon_html});
+
+            const marker = L.marker(latlng, {icon: building_icon}).addTo(map).bindPopup(content);
             building_markers.push(marker);
         }
         //console.log(building_markers);

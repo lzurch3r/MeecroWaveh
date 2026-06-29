@@ -89,7 +89,25 @@ body.dark .leaflet-layer, body.dark .leaflet-control-zoom-in, body.dark .leaflet
 
 .marker_content {
     justify-items: center;
-    
+}
+
+#map .leaflet-building-icon {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+}
+
+.building-icon-html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    justify-self: center;
+    color: rgb(236, 236, 236);
+    background-color: #0c75ffd4;
+    border-radius: 15%;
+    padding: 0.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 /*--------------- Footer CSS   ---------------*/
