@@ -82,10 +82,17 @@ map.on('zoomend', function() {
         if (map.hasLayer(floor1Group)) map.removeLayer(floor1Group);
         if (map.hasLayer(floor2Group)) map.removeLayer(floor2Group);
         if (map.hasLayer(floor3Group)) map.removeLayer(floor3Group);
+        displayZoomMessage(false);
         displayZoomedOut(true);
         items.forEach(element => {
             hasItems(element)
         });
+    } else if (currentZoom <= 14) {
+        // const zoomIcon = L.divIcon({className: 'leaflet-building-icon',
+        //     html: '<p class="zoom-icon-html">PLEASE ZOOM IN</p>'})
+        // const marker = L.marker([43.816046, -111.783228], {icon: zoomIcon}).addTo(map)
+        displayZoomMessage(true);
+        displayZoomedOut(false);
     } else {
         if (currentZoom >= 18) { 
             if (!map.hasLayer(floor1Group) && !map.hasLayer(floor2Group) && !map.hasLayer(floor3Group)) {
@@ -95,6 +102,7 @@ map.on('zoomend', function() {
                 if (layerControlElement) layerControlElement.checked = true;
             }
         }
+        displayZoomMessage(false);
         displayZoomedOut(false);
     }
 });
@@ -121,7 +129,7 @@ function displayZoomedOut(load_it) {
 
             // Enters the text for the building marker
             const icon_html = '<p class="building-icon-html">' + building.building_name + '</p>';
-            var building_icon = L.divIcon({className: '.leaflet-building-icon', html: icon_html});
+            var building_icon = L.divIcon({className: 'leaflet-building-icon', html: icon_html});
 
             const marker = L.marker(latlng, {icon: building_icon}).addTo(map).bindPopup(content);
             building_markers.push(marker);
@@ -156,4 +164,27 @@ function hasItems(item_array) {
     let returnList = [...s]
 
     return returnList;
+}
+
+/** Function: Displays "Please zoom in" if zoomed out way too far */
+function displayZoomMessage(load_it) {
+    if (load_it) {
+        if (!document.getElementById('zoom_element')) {
+            const zoom_element = document.createElement("div");
+            zoom_element.className = "zoom-container";
+            zoom_element.id = 'zoom_element';
+            
+            zoom_element.innerHTML = "<p class='zoom-icon-html'>Please zoom in</p>"
+            
+            const mapDOM = document.getElementById('map');
+            mapDOM.append(zoom_element);
+        }
+    } else {
+        try {
+            if (document.getElementById('zoom_element'))
+                document.getElementById('zoom_element').remove();
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
