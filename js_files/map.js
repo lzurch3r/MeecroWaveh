@@ -109,13 +109,15 @@ function displayZoomedOut(load_it) {
             const image = "<img class=icon src=\"icons/icon-microwave_32x32.ico\">"
             const name = "<h4>" + building.building_name + "</h4>";
 
-            let content = "<div class=\"marker_content\">" + name + "</div>";
+            let content = "<div class=\"marker_content\">" + name;
 
             buildings_with_microwaves.forEach(element => {
                 if (element.building_id == building.building_id) {
                     content += image;
                 }
             });
+
+            content += "</div>";
             
 
             const marker = L.marker(latlng).addTo(map).bindPopup(content);
