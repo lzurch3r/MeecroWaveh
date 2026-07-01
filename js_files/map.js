@@ -29,12 +29,12 @@ function hasItems(item_array) {
 // Keep the database tracking arrays up here safely
 var building_markers = null;
 const items = [microwaves, printers, vending_machines];
- 
+
 // Safely extract building IDs that contain items
 var buildings_with_items = [hasItems(items[0])]; 
- 
+
 // Use standard modern array filtering instead of manual nested counters (prevents freezing)
-var buildings_with_microwaves = buildings.filter(building =>
+var buildings_with_microwaves = buildings.filter(building => 
     buildings_with_items[0].includes(building.building_id)
 );
  
@@ -347,7 +347,7 @@ function setupBuildingMenu(floorConfiguration, defaultFloor) {
 // 6. GLOBAL ZOOM CLEANUP LISTENER & UTILITIES
 // ==========================================
  
-// Helper mapping dictionary connecting a building string name to its array floor layers
+// Helper mapping dictionary connecting a building ID to its array floor layers
 const buildingFloorMap = {
     "STC": { 1: stcFloor1Group, 2: stcFloor2Group, 3: stcFloor3Group },
     "Austin": { 1: austinFloor1Group, 2: austinFloor2Group },
@@ -404,14 +404,16 @@ map.on('zoomend', function() {
         }
     }
 });
- 
+
+// POPULATE ALL PINS DIRECTLY TO LAYER GROUPS ONCE
 // POPULATE ALL PINS DIRECTLY TO LAYER GROUPS ONCE
 function populateFloorPins() {
     console.log("--- START PINS DIAGNOSTIC ---");
     let matchedMicrowaves = 0;
- 
+
     microwaves.forEach((m, idx) => {
         const targetBuilding = buildings.find(b => b.building_id == m.building_id);
+        // Fallback to building_id string if building_name isn't matching the dictionary key
         const buildingKey = targetBuilding ? targetBuilding.building_name : m.building_id;
         
         const associatedRoom = rooms.find(r => r.room_id == m.room_id);
@@ -428,10 +430,10 @@ function populateFloorPins() {
             console.warn(`Microwave index ${idx} failed match. Key used: "${buildingKey}", Layer Found: ${!!targetingGroup}`);
         }
     });
- 
+
     console.log(`Successfully mapped ${matchedMicrowaves} out of ${microwaves.length} microwaves.`);
     console.log("--- END PINS DIAGNOSTIC ---");
- 
+
     // --- Apply the exact same logic below to printers ---
     printers.forEach(p => {
         const targetBuilding = buildings.find(b => b.building_id == p.building_id);
@@ -446,7 +448,6 @@ function populateFloorPins() {
              .addTo(targetingGroup);
         }
     });
- 
     // --- Apply the exact same logic below to vending machines ---
     vending_machines.forEach(v => {
         const targetBuilding = buildings.find(b => b.building_id == v.building_id);
@@ -473,7 +474,7 @@ function displayZoomedOut(load_it) {
     buildings.forEach((building) => {
         const latlng = [building.latitude, building.longitude];
  
-        // Count using matching database IDs
+        // FIXED: Count using matching database strings/IDs instead of array iteration position index
         const microCount = microwaves.filter(m => m.building_id == building.building_id).length;
         const printCount = printers.filter(p => p.building_id == building.building_id).length;
         const vendCount  = vending_machines.filter(v => v.building_id == building.building_id).length;
