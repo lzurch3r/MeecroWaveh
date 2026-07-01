@@ -3,15 +3,18 @@ header {
     background-color: #3a7ca5;
     padding-top: 1em;
 }
-header.dark {
+
+body.dark header { 
     background-color: #16425b;
 }
+
 .icon {
     max-width: 3em;
     height: auto;
-    vertical-align: middle;
+    vertical-align: top;
     display: inline-block;
 }
+
 ul {
     display: flex;
     justify-content: center;
@@ -20,30 +23,38 @@ ul {
 
 li {
     margin: .5em;
-    background-color: #2f6690;   
+    background-color: #2f6690;
+    border-radius: 10px;
 }
+
 ul li {
     float: none;
 }
+
 ul li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    border-radius: 10px;
 }
+
 ul li a:hover, #theme:hover {
     background-color: #81c3d7;
 }
-header h1 {
+
+header h1 { 
     letter-spacing: 1px;
     font-size: 2em;
     display: inline-block;
 }
+
 #theme {
     background-color: #16425b;
 }
-#theme.dark {
+
+body.dark #theme { 
     background-color: #3a7ca5;
 }
 /*--------------- Body CSS   ---------------*/
@@ -61,7 +72,7 @@ h1, p {
     background-color: #d9dcd6;
 }
 
-#map.dark {
+body.dark #map { 
     background-color: #16425b;
 }
 
@@ -75,7 +86,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark {
+body.dark { 
     background-color: #16425b;
     color: white;
 }
@@ -104,8 +115,6 @@ footer{
 footer h6 {
     float: right;
 }
-
-
 
 /*------------  Mobile CSS  -----------------*/
 
@@ -168,4 +177,3 @@ footer h6 {
         padding: 10px;
     }
 }
-
